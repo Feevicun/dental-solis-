@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+section{
+    min-height: 155vh;
+}
+
+.services__main-logo{
+    position: absolute;
+    left: 874px;
+    top: 237px;
+}
+
+.services h2{
+    position: absolute;
+    width: 262px;
+    height: 58px;
+    left: 1195px;
+    top: 306px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+}
+
+.services h2::before{
+    position: absolute;
+    content: "";
+    top: -30px;
+    left: -30px;
+    width: 104px;
+    height: 104px;
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+}
+
+.services h2::after{
+    position: absolute;
+    content: "";
+    width: 55px;
+    height: 55px;
+    top: 50px;
+    left: 250px;
+    border-bottom: 10px solid #DC4F00;
+    border-right: 10px solid #DC4F00;
+}
+
+.panel {
+    transition: 1s;
+    max-height: 0;
+    margin-top: 30px;
+    background-color: white;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size: 25px;
+}
+
+.container {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    top: 636px;
+    left: 243px;
+    width: 70%;
+    position: absolute;
+    padding: 40px;
+    transition: 0.4s;
+}
+
+.container ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.container ul li {
+    position: relative;
+    margin: 30px 0;
+    padding: 0 5px 0 35px;
+    cursor: pointer;
+}
+
+.container ul li::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 67px;
+    height: 67px;
+    border-radius: 70px;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    border: 3px solid #DC4F00;
+}
+
+.container ul li:hover::before {
+    background-color: #DC4F00;
+}
+
+.container ul li::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    width: 16px;
+    height: 15px;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    transform: rotate(45deg);
+    transition: 0.5s, border 0s, border-color .2s;
+}
+
+.container ul li:hover::after{
+    border-color: white;
+}
+
+.container ul li p {
+    position: relative;
+    margin-left: 50px;
+    padding: 0px 5px;
+    color: black;
+    z-index: 5;
+    transition: .3s;
+}
+
+.item.active p{
+    color: white;
+}
+
+.item.active::before{
+    width: 100%;
+    background-color: #DC4F00;
+}
+
+.item.active::after{
+    top: 10px;
+    left: 30px;
+    border: 2px solid white;
+    /* border-bottom: 2px solid black;
+    border-left: 2px solid black; */
+    transform: rotate(45deg) scale(1.5);
+}
